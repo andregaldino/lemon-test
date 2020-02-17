@@ -27,14 +27,12 @@ const cipByIcms = (icms) => {
     .filter(el => icms.start < el.end)
 }
 
-const findIcms = (total, listIcms) => {
-  return listIcms.find(tax =>
-    tax.possibleCips.filter(el =>
-      (total - el.reais) <= tax.max &&
-      (total - el.reais) >= tax.min
-    ).length
-  )
-}
+const findIcms = (total, listIcms) => listIcms.find(tax =>
+  tax.possibleCips.filter(el =>
+    (total - el.reais) <= tax.max &&
+    (total - el.reais) >= tax.min
+  ).length
+)
 
 const findCip = (icms, total) => {
   const { possibleCips } = icms
@@ -46,9 +44,12 @@ const findCip = (icms, total) => {
   })
 }
 
-const calculateKwh = ({ kwhReais, cip, total }) => {
-  return (total - cip) / kwhReais
-}
+const calculateKwh = ({ kwhReais, cip, total }) =>
+  (total - cip) / kwhReais
+
+const formatKwh = (kwh) => Math.round(kwh)
+
+const formatPercent = (percent) => percent * 100
 
 module.exports.calc = (total) => {
 
@@ -62,7 +63,7 @@ module.exports.calc = (total) => {
 
   return {
     cip: cip.reais,
-    icms: icmsTax.icms,
-    kwh
+    icms: formatPercent(icmsTax.icms),
+    kwh: formatKwh(kwh)
   }
 }
