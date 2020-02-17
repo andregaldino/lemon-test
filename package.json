@@ -1,0 +1,15 @@
+{
+  "name": "test-lemon",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "author": {
+    "name": "André Galdino",
+    "email": "andre.galdinolima@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,5 @@
+const { calc } = require('./taxes')
+const response = calc(135.93)
+console.log(`${response.kwh} KWH`)
+console.log(`${response.icms * 100}% ICMS`)
+console.log(`${response.cip} COSIP`)

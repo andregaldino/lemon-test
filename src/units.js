@@ -1,0 +1,35 @@
+module.exports = {
+  listIcms: [
+    { start: 0, end: 50, icms: 0 },
+    { start: 51, end: 200, icms: 0.12 },
+    { start: 201, end: 300, icms: 0.18 },
+    { start: 301, end: 500, icms: 0.21 },
+    { start: 501, end: Number.MAX_SAFE_INTEGER, icms: 0.25 }
+  ],
+  listCips: [
+    { reais: 0, start: 0, end: 30 },
+    { reais: 0, start: 31, end: 50 },
+    { reais: 0, start: 51, end: 80 },
+    { reais: 2.96, start: 81, end: 100 },
+    { reais: 7.87, start: 101, end: 180 },
+    { reais: 9.49, start: 181, end: 220 },
+    { reais: 15.83, start: 221, end: 300 },
+    { reais: 22.16, start: 301, end: 400 },
+    { reais: 27.68, start: 401, end: 500 },
+    { reais: 34.94, start: 501, end: 600 },
+    { reais: 40.78, start: 601, end: 700 },
+    { reais: 46.61, start: 701, end: 800 },
+    { reais: 52.40, start: 801, end: 900 },
+    { reais: 58.21, start: 901, end: 1000 },
+    { reais: 103.84, start: 1001, end: 2000 },
+    { reais: 162.78, start: 2001, end: 3000 },
+    { reais: 186.79, start: 3001, end: 4000 },
+    { reais: 236.55, start: 4001, end: 5000 },
+    { reais: 333.89, start: 5001, end: 7000 },
+    { reais: 472.93, start: 7001, end: 10000 },
+    { reais: 547.03, start: 10001, end: Number.MAX_SAFE_INTEGER },
+  ],
+  kwhReais: 0.5572,
+  pis: 0.0083,
+  cofins: 0.0383
+}
